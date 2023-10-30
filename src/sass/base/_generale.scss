@@ -4,7 +4,7 @@ html {
 
 
 
-h1 , h2, h3, h4, p, a {
+h1 , h2, h3, h4, p, a , button {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -35,5 +35,10 @@ h1 , h2, h3, h4, p, a {
 
 li {
     list-style: none;
+}
+
+.title {
+    text-align: center;
+    font-size: 46px;
 }
 
