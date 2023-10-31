@@ -134,7 +134,7 @@ li {
 }
 
 .competence {
-  padding-bottom: 40px;
+  padding-top: 70px;
 }
 .competence__container {
   padding: 0 20px;
@@ -186,8 +186,17 @@ li {
   opacity: 1;
 }
 
+.portfolio {
+  padding: 70px 40px;
+}
+
 .portfolio__container {
-  padding: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .portfolio__card {
@@ -211,6 +220,8 @@ li {
   font-size: 18px;
   font-weight: 800;
   margin: 0;
+  position: absolute;
+  top: 30px;
 }
 
 .portfolio__text {
@@ -219,6 +230,9 @@ li {
 
 .portfolio__btn {
   background-color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   color: white;
   border: none;
   padding: 10px;

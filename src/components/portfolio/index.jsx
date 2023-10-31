@@ -1,28 +1,30 @@
 import React from 'react';
-import ohmyfood from '../../assets/images/ohmyfood.png';
+import { portfolio } from '../../assets/data/card';
+import { Link } from 'react-router-dom';
 
 
 function Portfolio() {
   return (
 
-    <div className='portfolio__container'>
-      <div className='portfolio__card'>
-        <img className='portfolio__img' src= {ohmyfood} alt="" />
-        <div className='portfolio__content'>
-            <h5 className='portfolio__title'>OhMyFood</h5>
-            <p className='portfolio__text'>
-             L'entreprise Oh My Food souhaitait un site 
-             mobile-first qui répertorie
-             les menus de restaurants gastronomiques. 
-             Il fallait le développer pour mobile, tablette et desktop en s’appuyant rigoureusement sur
-             les informations déterminées dans le brief créatif et inclure des animations soignées !</p>
-             <div className='portfolio__btns'>
-             <button className='portfolio__btn'>Voir site</button>
-             <button className='portfolio__btn'>Voir code</button>
-             </div>
-        </div>
-      </div>
-    </div>
+    <section className='portfolio'>
+       <h4 className='title'>Portfolio</h4>
+       <div className='portfolio__container'>
+       {portfolio.map((card, index ) => (
+            <div className='portfolio__card' key={index}>
+            <img className='portfolio__img' src= {card.image} alt="" />
+            <div className='portfolio__content'>
+                <h3 className='portfolio__title'>{card.name}</h3>
+                <p className='portfolio__text'>{card.text}</p>
+                 <div className='portfolio__btns'>
+                  <Link to={card.code} className='portfolio__btn'>Voir le code</Link>
+                  <Link to={card.site} className='portfolio__btn'>Voir le site</Link>
+                 </div>
+            </div>
+          </div>
+
+      ))}
+       </div>
+    </section>
   );
 }
 

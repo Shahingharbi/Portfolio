@@ -3,6 +3,7 @@ import Hero from '../components/hero'
 import Info from '../components/info'
 import Competence from '../components/competence'
 import Portfolio from '../components/portfolio'
+import Contact from '../components/contact'
 
 function Home() {
   return (
@@ -11,6 +12,8 @@ function Home() {
     <Info />
     <Competence />
     <Portfolio />
+    <Contact />
+
     </main> 
   )
 }
