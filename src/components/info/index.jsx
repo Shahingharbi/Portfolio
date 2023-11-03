@@ -1,5 +1,5 @@
 import React from 'react'
-import imagePortfolio from '../../assets/images/image_portfolio.png'
+import imagePortfolio from '../../assets/images/image_portfolio.jpg'
 import { Link } from 'react-router-dom';
 
 function Info() {
@@ -18,14 +18,15 @@ function Info() {
             <p className='info__subtitle'>
                 N'hésitez pas à me contacter si vous êtes à la recherche d'un <strong>développeur web</strong> enthousiaste et motivé pour rejoindre votre équipe ou collaborer sur un projet. Je suis impatient de contribuer à votre succès.
             </p>
+            <div className='info__cv'> 
+            <Link className='info__link'> Télechargez mon CV </Link> 
+            </div>
            </div>
            <div className='info__image'> 
             <img src={imagePortfolio} alt="profil" />
           </div>
           </div>
-          <div className='info__cv'> 
-          <Link> Télechargez mon CV </Link> 
-          </div>
+        
         </div>
       </section>
     );

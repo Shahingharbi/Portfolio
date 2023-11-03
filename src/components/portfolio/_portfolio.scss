@@ -7,6 +7,8 @@
     @include flex-center;
     flex-wrap: wrap;
     gap: 50px;
+    box-shadow: 1px 1px 25px 0 #b8b5ff, 1px 6px 2px 0 rgb(182, 182, 182);
+    border-radius: 25px;
   }
   
   .portfolio__card {
@@ -90,4 +92,21 @@
   .portfolio__btns {
     display: flex;
     gap: 20px;
+  }
+
+  @media (max-width : 768px) {
+    .portfolio {
+      padding: 70px 0;
+      &__container {
+        gap: 20px;
+        margin: 0 1%;
+        padding: 15px 5px;
+      }
+      &__title {
+        top: 10%;
+      }
+      &__text {
+        font-size: 12px;
+      }
+    }
   }

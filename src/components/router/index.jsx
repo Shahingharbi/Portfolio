@@ -3,6 +3,7 @@ import React from 'react';
 import Home from '../../pages/home';
 import Error from '../../pages/error';
 import Header from '../header';
+import Footer from '../footer';
 
 
 
@@ -15,6 +16,7 @@ function Router() {
                 <Route path="/" element={<Home />} />
                 <Route path='*' element={<Error />} />
             </Routes>
+            <Footer />
         </div>
 
     );
