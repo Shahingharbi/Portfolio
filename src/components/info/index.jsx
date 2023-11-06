@@ -1,6 +1,6 @@
 import React from 'react'
 import imagePortfolio from '../../assets/images/image_portfolio.jpg'
-import { Link } from 'react-router-dom';
+import cv from '../../assets/Shahin_GHARBI_CV.pdf'
 
 
 function Info() {
@@ -20,7 +20,9 @@ function Info() {
                 N'hésitez pas à me contacter si vous êtes à la recherche d'un <strong>développeur web</strong> enthousiaste et motivé pour rejoindre votre équipe ou collaborer sur un projet. Je suis impatient de contribuer à votre succès.
             </p>
             <div className='info__cv'> 
-            <Link className='info__link'> Télechargez mon CV </Link> 
+            <a href={cv} className='info__link' target="_blank" rel="noopener noreferrer">
+                Téléchargez mon CV
+            </a>
             </div>
            </div>
            <div className='info__image'> 
