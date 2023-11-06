@@ -2,7 +2,7 @@ html {
   background-color: #f0f0f0;
 }
 
-h1, h2, h3, h4, p, a, button {
+h1, h2, h3, h4, p, a, button, span {
   font-family: "Poppins", sans-serif;
 }
 
@@ -323,7 +323,7 @@ li {
 
 .portfolio__card {
   width: 330px;
-  height: 380px;
+  height: 400px;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -343,7 +343,7 @@ li {
   font-weight: 800;
   margin: 0;
   position: absolute;
-  top: 30px;
+  top: 15px;
 }
 
 .portfolio__text {
@@ -373,7 +373,7 @@ li {
   flex-direction: column;
   z-index: 1;
   color: white;
-  padding: 1rem;
+  padding: 5px;
   transform: translateY(calc(100% - 7.5rem));
   transition: transform 0.9s ease;
 }
@@ -404,6 +404,24 @@ li {
 .portfolio__btns {
   display: flex;
   gap: 20px;
+}
+
+.portfolio__competences {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  gap: 10px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.portfolio__competences span {
+  border: 2px solid #082ebd;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

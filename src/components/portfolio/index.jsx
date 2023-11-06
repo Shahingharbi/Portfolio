@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Portfolio() {
   return (
 
-    <section className='portfolio'>
+    <section className='portfolio' id='portfolio'>
        <h4 className='title'>Portfolio</h4>
        <div className='portfolio__container'>
        {portfolio.map((card, index ) => (
@@ -18,6 +18,11 @@ function Portfolio() {
                  <div className='portfolio__btns'>
                   <Link to={card.code} className='portfolio__btn'>Voir le code</Link>
                   <Link to={card.site} className='portfolio__btn'>Voir le site</Link>
+                 </div>
+                 <div className='portfolio__competences'>
+                 {card.competences.map((competence, i) => (
+                  <span key={i}>{competence}</span>
+                ))}
                  </div>
             </div>
           </div>

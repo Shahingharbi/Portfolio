@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Info() {
     return (
-      <section className='info'>
+      <section className='info' id='about'>
         <div className='info__content'>
           <h2 className='title'>À propos de moi</h2>
           <div className='info__flex '>

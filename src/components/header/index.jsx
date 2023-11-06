@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink, Link } from 'react-router-dom';
+
 
 function Header() {
 
@@ -16,22 +17,22 @@ function Header() {
         <h1 className='header__title'>Shahin Gharbi</h1>
         <ul>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} >
+            <Link to='/#about' className='header__lien' onClick={toggleMenu} >
               À propos
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='/competences'>
+            <NavLink className='header__lien' onClick={toggleMenu} to='#competences'>
               Compétences
             </NavLink>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='/portfolio'>
+            <NavLink className='header__lien' onClick={toggleMenu} to='#portfolio'>
               Portfolio
             </NavLink>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='/contact'>
+            <NavLink className='header__lien' onClick={toggleMenu} to='#contact'>
               Contact
             </NavLink>
           </li>
