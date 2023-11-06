@@ -7,7 +7,7 @@ function Portfolio() {
   return (
 
     <section className='portfolio' id='portfolio'>
-       <h4 className='title'>Portfolio</h4>
+       <h2 className='title'>Portfolio</h2>
        <div className='portfolio__container'>
        {portfolio.map((card, index ) => (
             <div className='portfolio__card' key={index}>

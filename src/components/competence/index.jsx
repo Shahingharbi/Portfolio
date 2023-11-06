@@ -11,7 +11,7 @@ function Competence() {
           {icone.map((competence, index) => (
             <div className='competence__card' key={index}>
               <div className='competence__card-content'>
-                <img src= {competence.image} alt={competence.name} />
+                <img src= {competence.image} alt={'Icône ' + competence.name} />
                 <span>{competence.name}</span>
               </div>
             </div>

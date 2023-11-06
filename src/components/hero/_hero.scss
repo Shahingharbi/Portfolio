@@ -23,17 +23,6 @@
         font-size: 26px;
         text-align: center;
     }
-    &__link {
-        text-decoration: none;
-        color: $secondary-color;
-        border: 3px solid ;
-        padding: 15px;
-            &:hover {
-                background-color: $secondary-color;
-                color: $tertiary-color;
-                border: none;
-            }
-    }
     
 }
 

@@ -154,17 +154,6 @@ li {
   font-size: 26px;
   text-align: center;
 }
-.hero__link {
-  text-decoration: none;
-  color: #082ebd;
-  border: 3px solid;
-  padding: 15px;
-}
-.hero__link:hover {
-  background-color: #082ebd;
-  color: #f0f0f0;
-  border: none;
-}
 
 @media (max-width: 768px) {
   .hero {
@@ -501,6 +490,7 @@ li {
   font-weight: 600;
   text-decoration: none;
   font-size: 18px;
+  margin: 0;
 }
 .contact__input {
   width: 100%;
@@ -546,6 +536,17 @@ li {
   font-size: 22px;
   gap: 20px;
   color: #f0f0f0;
+}
+.contact__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .fa-location-dot {
