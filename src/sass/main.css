@@ -476,7 +476,6 @@ li {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
   outline: none;
   transition: border-color 0.2s;
   font-family: "Poppins", sans-serif;
@@ -579,4 +578,15 @@ li {
   .footer {
     height: 60px;
   }
+}
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.error a {
+  text-decoration: none;
+  color: #082ebd;
 }/*# sourceMappingURL=main.css.map */

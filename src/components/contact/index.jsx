@@ -1,7 +1,30 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
+
 
 function Contact() {
+    const form = useRef();
+    const [confirmationMessage, setConfirmationMessage] = useState('');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    
+    emailjs.sendForm('service_slvovoh', 'template_fjc83hm', form.current, 'e8VxXA8tsdyyrCefN')
+      .then((result) => {
+          console.log(result.text);
+          setConfirmationMessage ('Votre message a bien été envoyé !');
+          setTimeout(() => {
+          setConfirmationMessage('');
+        }, 5000); 
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+          setConfirmationMessage('Une erreur est survenue. Veuillez réessayer.')
+      });
+  };
+
+    
   return (
     <section className='contact' id='contact'>
         <h2 className='title'>Contact</h2>
@@ -40,25 +63,26 @@ function Contact() {
 
                 </div>
                 <div className='contact__right'>
-                    <form action="" className='contact__form'>
+                    <form ref={form} onSubmit={sendEmail} className='contact__form' >
                         <div className='contact__input-container'>
                             <label htmlFor="name" className="contact__label">Nom*</label>
-                            <input id="name" className='contact__input' type="text" placeholder='Nom*' required/>
+                            <input id="name" name='name' className='contact__input' type="text" placeholder='NOM*' required/>
                         </div>
                         <div className='contact__input-container'>
                             <label htmlFor="email" className="contact__label">Email*</label>
-                            <input id="email" className='contact__input' type="email" placeholder='Email*' required/>
+                            <input id="email" name='email' className='contact__input' type="email" placeholder='EMAIL*' required/>
                         </div>
                         <div className='contact__input-container'>
                             <label htmlFor="phone" className="contact__label">Téléphone</label>
-                            <input id="phone" className='contact__input' type="tel" placeholder='Téléphone'/>
+                            <input id="phone" name='phone' className='contact__input' type="tel" placeholder='TELEPHONE'/>
                         </div>
                         <div className='contact__input-container'>
                             <label htmlFor="message" className="contact__label">Message*</label>
-                            <textarea id="message" className='contact__input' name="message" placeholder='Message*' rows="5" required></textarea>
+                            <textarea id="message" className='contact__input' name="message" placeholder='MESSAGE*' rows="5" required></textarea>
                         </div>
                         <input type="submit" className='contact__button' value="Envoyer"/>
                     </form>
+                    {confirmationMessage && <div className="confirmation-message">{confirmationMessage}</div>}
                 </div>
 
             </div>
