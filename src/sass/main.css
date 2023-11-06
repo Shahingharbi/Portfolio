@@ -44,36 +44,6 @@ li {
     font-size: 28px;
   }
 }
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 5% 0 5%;
-    &__nav {
-        @include flex-center;
-        flex-direction: row;
-        gap: 40px;
-    }
-    &__title {
-        font-family: 'Yellowtail', cursive;
-    }
-    &__bar {
-        display: none;
-    }
-}
-
-@media (max-width : 767px) {
-    .header {
-        &__nav {
-            display: none;
-        }
-        &__bar {
-            display: flex;
-            flex: 1;
-            justify-content: flex-end;
-        }
-    }
-} */
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -91,9 +61,13 @@ li {
   display: none;
 }
 .header__title {
-  font-family: "Yellowtail", cursive;
-  font-size: 35px;
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-size: 50px;
   margin: 0;
+}
+.header__lien {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

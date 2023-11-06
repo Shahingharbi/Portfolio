@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import {NavLink, Link } from 'react-router-dom';
-
+import {Link as ScrollLink} from 'react-scroll';
 
 function Header() {
-
   const [isMenuActive, setMenuActive] = useState(true);
 
   const toggleMenu = () => {
     setMenuActive(!isMenuActive);
   };
-
 
   return (
     <header className='header'>
@@ -17,32 +14,28 @@ function Header() {
         <h1 className='header__title'>Shahin Gharbi</h1>
         <ul>
           <li>
-            <Link to='/#about' className='header__lien' onClick={toggleMenu} >
+            <ScrollLink to="about" className='header__lien' smooth={true} duration={500} onClick={toggleMenu}>
               À propos
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='#competences'>
+            <ScrollLink to="competences"  className='header__lien' smooth={true} duration={500} onClick={toggleMenu}>
               Compétences
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='#portfolio'>
+            <ScrollLink to="portfolio"  className='header__lien' smooth={true} duration={500} onClick={toggleMenu}>
               Portfolio
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className='header__lien' onClick={toggleMenu} to='#contact'>
+            <ScrollLink to="contact"  className='header__lien' smooth={true} duration={500} onClick={toggleMenu}>
               Contact
-            </NavLink>
+            </ScrollLink>
           </li>
         </ul>
         <div className='header__icons' onClick={toggleMenu}>
-            {isMenuActive ? (
-                <span>&#9776;</span>
-            ) : (
-                <span>&#10005;</span>
-            )}
+          {isMenuActive ? <span>&#9776;</span> : <span>&#10005;</span>}
         </div>
       </nav>
     </header>
@@ -50,3 +43,6 @@ function Header() {
 }
 
 export default Header;
+
+
+
