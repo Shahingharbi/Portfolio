@@ -1,6 +1,6 @@
 import React from 'react'
 import imagePortfolio from '../../assets/images/image_portfolio.jpg'
-import cv from '../../assets/Shahin_GHARBI_CV.pdf'
+import cv from '../../assets/Shahin_Gharbi_Alternance.pdf'
 
 
 function Info() {

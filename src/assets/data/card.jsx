@@ -87,7 +87,7 @@ export const portfolio =  [
     {
         "name" : "Portfolio architecte ",
         "image" : Sophiebluel,
-        "text" : "Chez ArchiWebos, j'ai contribué à la conception du site portfolio de Sophie Blue, architecte d'intérieur. Mon rôle en tant que développeur front-end a impliqué la création de la page de présentation, de la page de connexion de l'administrateur, et d'une modale d'upload de médias. ",
+        "text" : "Chez ArchiWebos, j'ai contribué à la conception du site portfolio de Sophie Bluel, architecte d'intérieur. Mon rôle en tant que développeur front-end a impliqué la création de la page de présentation, de la page de connexion de l'administrateur, et d'une modale d'upload de médias. ",
         "code" : "https://github.com/Shahingharbi/Projet_6",
         "site" : "" ,
         "competences" : ["HTML",  "CSS", "Javascript", "Swagger"]
